@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { TodoComponent } from './todo/todo.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [TodoComponent], // 👈 importa tu componente aquí
   templateUrl: './app.html',
-  styleUrl: './app.css'
 })
-export class App {
-  protected title = 'proyecto-prueba';
-}
+export class AppComponent {}
