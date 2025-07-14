@@ -1,11 +1,17 @@
-<div>
-  <input [(ngModel)]="nuevaTarea" placeholder="Nueva tarea" />
-  <button (click)="agregarTarea()">Agregar</button>
+<h1>Todo-List</h1>
+<div class="container">
+  <div class="add-task">
+    <div>
+      <input [(ngModel)]="nuevaTarea" placeholder="Nueva tarea" />
+      <button (click)="agregarTarea()">Agregar</button>
+    </div>
+  </div>
+  <div class="tasks">
+    <ul>
+      <li *ngFor="let tarea of tareas; let i = index">
+        {{ tarea }}
+        <button (click)="eliminarTarea(i)">Eliminar</button>
+      </li>
+    </ul>
+  </div>
 </div>
-
-<ul>
-  <li *ngFor="let tarea of tareas; let i = index">
-    {{ tarea }}
-    <button (click)="eliminarTarea(i)">Eliminar</button>
-  </li>
-</ul>

@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // 👈 Importa esto
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-todo',
-  standalone: true, // 👈 IMPORTANTE en standalone
-  imports: [FormsModule], // 👈 Dile qué módulos usa
+  standalone: true,
+  imports: [FormsModule, CommonModule],
   templateUrl: './todo.html',
   styleUrls: ['./todo.css'],
 })
